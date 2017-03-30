@@ -1,5 +1,4 @@
-﻿using System;
-using Windows.Foundation.Collections;
+﻿using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -14,11 +13,11 @@ namespace HamburgerAppTemplate.UserControls
             this.InitializeComponent();
 
             titleText.Margin = new Thickness(20, 0, 20, 0);
-            myCommandBar.PrimaryCommands.VectorChanged += commands_VectorChanged;
-            myCommandBar.SecondaryCommands.VectorChanged += commands_VectorChanged;
+            myCommandBar.PrimaryCommands.VectorChanged += Commands_VectorChanged;
+            myCommandBar.SecondaryCommands.VectorChanged += Commands_VectorChanged;
         }
 
-        private void commands_VectorChanged(IObservableVector<ICommandBarElement> sender, IVectorChangedEventArgs @event)
+        private void Commands_VectorChanged(IObservableVector<ICommandBarElement> sender, IVectorChangedEventArgs @event)
         {
             if (myCommandBar.PrimaryCommands.Count > 0 || myCommandBar.SecondaryCommands.Count > 0)
             {
